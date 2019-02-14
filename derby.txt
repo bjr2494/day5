@@ -1,0 +1,26 @@
+Manual Derby Notes:
+1 Set DERBY_HOME
+	C:\Program Files\glassfish-4.1.1\javadb
+	
+2 Starting the Derby Server
+	java -jar "%DERBY_HOME%/lib/derbyrun.jar" server start
+	
+	stopping the server is left as an exercise for the reader....
+
+3 Creating a database to use
+	java -jar "%DERBY_HOME%/lib/derbyrun.jar" ij
+	ij> CONNECT 'jdbc:derby://localhost:1527/dbName;create=true';
+	ij> DISCONNECT;
+	ij> CONNECT 'jdbc:derby://localhost:1527/db;create=true;username=XX;password=XX';
+	
+4 Connecting to a database
+	java -java "%DERBY_HOME%/lib/derbyrun.jar" ij
+	ij> CONNECT 'jdbc:derby://localhost:1527/dbName;username=XX;password=XX';
+	
+5 Creating tables, etc are SQL standard-ish
+
+6 Quitting ij
+	ij> quit; --or exit;
+	
+	
+	
